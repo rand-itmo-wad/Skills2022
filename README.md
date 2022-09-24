@@ -21,4 +21,81 @@ $ git config --global user.email "your_github_email"
 $ git config -l
 ```
 ### Task verification 
-![=> proof of the quality of the result (Screenshots)(Task1Screens)](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/4.png)
+![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/4.png)
+
+## Task5:
+### Task name: 
+Unit testing
+### Task preparation: 
+create `task5` directory inside the `Skills2022` directory using `mkdir` 
+### Task implementation 
+ 1. Create `task.py` file contains the functions which we need to test:
+  ```python
+def factors(n):
+    p = 2
+    f = list()
+    while n >= p*p :
+        if n % p == 0:
+            f.append(p)
+            n = int(n / p)
+        else:
+           p = p + 1
+    f.append(n)
+    return f
+
+def is_prime(number):
+    if number <= 1:
+        return False
+    for n in range(2, number):
+        if number % n == 0:
+            return False
+        else:
+            return True
+
+def vowels(text):
+    v = list()
+    for i in text:
+        if i in 'aeiouAEIOU':
+            v.append(i)
+    return v
+```
+ 2. import `unittest` 
+```python
+import  unittest
+```
+ 3. Add test class which inherits unittest.TestCase
+ 4. Convert the test functions into methods by adding `self` as the first argument
+```python
+class TestTask5(unittest.TestCase):
+    def test_factors(self):
+        self.assertCountEqual(factors(1), [1], "Should be [1]")
+        self.assertCountEqual(factors(4), [2, 2], "Should be [2,2]")
+        self.assertCountEqual(factors(5), [5], "Should be [5]")
+        self.assertCountEqual(factors(6), [2,3], "Should be [2,3]")
+
+    def test_is_prime(self):
+        self.assertEqual(is_prime(-1), False, "Should be False")
+        self.assertEqual(is_prime(1), False, "Should be False")
+        self.assertEqual(is_prime(4), False, "Should be False")
+        self.assertEqual(is_prime(5), True, "Should be True")
+        self.assertEqual(is_prime(6), False, "Should be False")
+
+    def test_vowels(self):
+        self.assertCountEqual(vowels("ok"), ["o"], 'Should be ["o"]')
+        self.assertCountEqual(vowels("test"), ["e"], 'Should be ["e"]')
+        self.assertCountEqual(vowels("aeiouAEIOU"), ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"], 'Should be ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]')
+        self.assertCountEqual(vowels(""), [], "Should be []")
+
+    def test_len(self):
+        self.assertEqual(len(""), 0, "Should be 0")
+        self.assertEqual(len("test"), 4, "Should be 4")
+        self.assertEqual(len("test "), 5, "Should be 5")
+        self.assertEqual(len([1, 2]), 2, "Should be 2")
+
+if __name__ == '__main__':
+    unittest.main()
+```
+### Task troubleshooting 
+N/A
+### Task verification 
+![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task5/screenshots/1.png)
