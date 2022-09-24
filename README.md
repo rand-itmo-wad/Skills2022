@@ -7,8 +7,8 @@ Manage GitHub scripts and documents
 ### Task preparation: 
 create `Skills2022` directory inside the home directory using `mkdir` 
 ### Task implementation 
- 1. Initialize the local repository ![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/1.png)
- 2. Create `README.md` file and add it to the repo ![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/2.png)
+ 1. Create `Skills2022` directory![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/1.png)
+ 2. Initialize the local repository, Create `README.md` file and add it to the repo. ![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/2.png)
  3. Create remote repo and add remote origin ![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/3.png)
  4. Had the error  `Password support removed` and solve it using the following commands after create personal access token (explained in details in task troubleshooting).
  5. push the commits to the remote repo using `push` command ![enter image description here](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/4.png)
