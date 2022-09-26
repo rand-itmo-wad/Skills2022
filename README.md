@@ -1,6 +1,6 @@
 # Skills 2022 - Rand Deeb
 
-**Author**: Rand Deeb / Informaion Security master student / ITMO University 
+**Author**: Rand Deeb / Information Security master student / ITMO University 
 
 This repository is a practical project in ITMO University
 
