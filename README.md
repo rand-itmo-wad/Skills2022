@@ -23,6 +23,61 @@ $ git config -l
 ### Task verification 
 ![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task1/screenshots/4.png)
 
+## Task2:
+### Task name: 
+Manage WebServers through Ansible.
+### Task preparation: 
+- Create `task2` directory inside the `Skills2022` directory using `mkdir` 
+- Enable the SSH server ![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/1.png)
+### Task implementation 
+ 1. Copy `Desktop/labs/devnet-src/ansible/ansible-apache` files to `Skills2022/task2`
+ 2. Add the following to `hosts` file 
+```
+[webservers] 
+192.0.2.3 ansible_ssh_user=devasc ansible_ssh_pass=Cisco123!
+```
+3. Add the following to `ansible.cfg` config:
+```
+[defaults]
+# hosts
+inventory=./hosts 
+# RSA
+host_key_checking = False
+# retry files
+retry_files_enable = False
+```
+ 3. Add the following to the playbook file:
+```
+- hosts: webservers 
+  become: yes 
+  tasks: 
+    - name: INSTALL APACHE2 
+      apt: name=apache2 update_cache=yes state=latest 
+  
+    - name: ENABLED MOD_REWRITE
+      apache2_module: name=rewrite state=present 
+      notify: 
+        - RESTART APACHE2 
+  
+    - name: TESTING
+      command: /bin/echo test
+  
+  handlers: 
+    - name: RESTART APACHE2 
+      service: name=apache2 state=restarted  
+```
+
+### Task troubleshooting 
+N/A
+### Task verification 
+Lets run the playbook and check using the following command
+`ansible-playbook -v WEBSERVER_INSTALLATION_AND_TESTING.yaml`
+![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/2.png)
+![2](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/3.png)
+![3](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/4.png)
+As we can see nothing failed.
+
+
 ## Task5:
 ### Task name: 
 Unit testing
