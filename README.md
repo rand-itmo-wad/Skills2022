@@ -104,6 +104,28 @@ We can test using `ntpdate`
 2. Run the following command `ntpdate -q 127.0.0.1`
 ![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/5.png)
 
+## Task4:
+### Task name: 
+CI/CD Pipeline using Jenkins
+### Task preparation: 
+ 1. pull Jenkins 
+![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/1.png)
+
+2. run Jenkins
+![2](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/2.png)
+### Task implementation 
+ 1. Open Jenkins from browser `http://localhost:8080`, after init user and password.
+![3](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/4.png)
+
+ 2. Create new job![4](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/5.png)
+ 
+ 3. building commands
+![4](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/8.png)
+### Task troubleshooting 
+N/A
+### Task verification 
+Run and wait, it will clone the repo and execute the setup&run script and you will notice the success sign
+![4](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task4/screenshot/9.png)
 
 ## Task5:
 ### Task name: 
