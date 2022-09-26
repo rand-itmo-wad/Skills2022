@@ -28,7 +28,9 @@ $ git config -l
 Manage WebServers through Ansible.
 ### Task preparation: 
 - Create `task2` directory inside the `Skills2022` directory using `mkdir` 
-- Enable the SSH server ![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/1.png)
+- Enable the SSH server
+
+![](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/1.png)
 ### Task implementation 
  1. Copy `Desktop/labs/devnet-src/ansible/ansible-apache` files to `Skills2022/task2`
  2. Add the following to `hosts` file 
