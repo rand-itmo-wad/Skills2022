@@ -4,8 +4,6 @@
 
 This repository is a practical project in ITMO University
 
-[TOC]
-
 ## Task1:
 ### Task name: 
 Manage GitHub scripts and documents
