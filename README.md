@@ -79,6 +79,31 @@ Lets run the playbook and check using the following command
 ![3](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task2/screenshots/4.png)
 As we can see nothing failed.
 
+## Task3:
+### Task name: 
+Manage Docker microservices
+### Task preparation: 
+Create `task3` directory inside the `Skills2022` directory using `mkdir`  
+
+![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/1.png)
+### Task implementation 
+ 1. Copy `Dockerfile` & `startup.sh` from repo `https://github.com/cturra/docker-ntp` 
+ 2. Build with docker build 
+
+![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/2.png)
+ 
+ ![2](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/3.png)
+ 
+ 3. Run 
+ ![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/4.png)
+### Task troubleshooting 
+N/A
+### Task verification 
+We can test using `ntpdate`
+1. Install `ntpdate` using `apt install`
+2. Run the following command `ntpdate -q 127.0.0.1`
+![1](https://raw.githubusercontent.com/rand-itmo-wad/Skills2022/main/task3/screenshots/5.png)
+
 
 ## Task5:
 ### Task name: 
