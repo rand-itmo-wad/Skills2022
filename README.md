@@ -1,5 +1,10 @@
+# Skills 2022 - Rand Deeb
 
-# Skills 2022 test
+**Auhor**: Rand Deeb / Informaion Security master student / ITMO University 
+
+This repository is a practical project in ITMO University
+
+[TOC]
 
 ## Task1:
 ### Task name: 
